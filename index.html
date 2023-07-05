@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <title>Document</title>
+    <style>
+        /* Custom CSS for navigation bar */
+        .nav-menu {
+            display: none;
+            /* Hide the menu by default */
+        }
+
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service:hover {
+            animation: fadeInUp 1.5s ease-out;
+        }
+        *{
+            scroll-behavior: smooth;
+        }
+        
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .animate-fade-in {
+        animation: fade-in 1s ease-in-out;
+    }
+    
+#home{
+    content: " ";
+    z-index: -1;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEA07xv4Aiw3SZJRv4Nc6y9etoPliIVCxbug&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav class="bg-gray-800">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <!-- Hamburger menu icon -->
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger icon -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <!-- Close icon -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex-shrink-0">
+                        <a href="#" class="text-white text-xl font-bold">Arpit</a>
+                    </div>
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex space-x-4">
+                            <!-- Navigation links -->
+                            <a href="#"
+                                class="text-white active:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                            <a href="#about"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                            <a href="#service"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                            <a href="#contact"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <!-- Navigation links -->
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                    <a href="#about"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                    <a href="#service"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                    <a href="#contact"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- home section -->
+    <section class="text-black py-20" id="home">
+        <div class="container mx-auto flex flex-col items-center">
+          <h1 class="text-6xl font-bold">Welcome to My Portfolio</h1>
+          <p class="mt-4 text-xl">I'm a web developer passionate about creating awesome websites.</p>
+          <a href="#projects" class="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">View Projects</a>
+        </div>
+      </section>
+
+
+    <!-- about section -->
+
+    <section class="bg-violet-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center" id="about">
+                <h2 class="text-5xl font-semibold "> Hello, It's Me Arpit joshi </h2>
+                <h2 class="text-3xl font-semibold mt-5"> And I'm a  <span id="typewriter" class="typewriter-animation"> </span></h2>
+            </div>
+            <div class="mt-10">
+                <div class="flex flex-col sm:flex-row sm:justify-center">
+                    <div class="flex items-center justify-center w-full sm:w-1/2">
+
+                        <img src="photo_2023-06-10_00-04-02.jpg" alt="Image"
+                            class="w-4/5 sm:w-3/5 md:w-2/5 lg:w-3/5 xl:w-2/5 mx-auto profile-image">
+                    </div>
+                    <div class="mt-10 sm:mt-0 sm:ml-10 sm:w-1/2">
+                        <h3 class="text-xl font-semibold ">About Us</h3>
+                        <p class="mt-4 text-base ">Hi i'm ARPIT , a front-end Web Developer from India, and
+                            i've more than 5 months of web designing experience..</p>
+                        <p class="mt-4 text-base ">I love to combining the logic and creative design to
+                            make user friendly websites. I create custom websites to help enterpreneurs to do better
+                            online.</p>
+                        <a href="#"
+                            class="  mt-6 inline-block bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors duration-300">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- project section -->
+    <section class="bg-neutral-300 py-20" id="projects">
+        <div class="container mx-auto">
+          <h2 class="text-4xl font-bold mb-8 text-center">My Projects</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="project-card bg-zinc-600 text-white p-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-9xl hover:shadow-green-800">
+              <h3 class="text-lg font-bold mb-4">Project 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis cursus risus non dignissim.</p>
+            </div>
+            <div class="project-card bg-zinc-600 text-white  p-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-6xl hover:shadow-orange-700">
+              <h3 class="text-lg font-bold mb-4">Project 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis cursus risus non dignissim.</p>
+            </div>
+            <div class="project-card bg-zinc-600 text-white  p-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-7xl hover:shadow-violet-800">
+              <h3 class="text-lg font-bold mb-4">Project 3</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis cursus risus non dignissim.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <!-- serivce section -->
+
+    <section class="bg-gray-700 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-4xl font-semibold text-white" id="service">Our Services</h2>
+                <p class="mt-4 text-lg text-white">Here are our some services which helps you to find your needs .</p>
+            </div>
+            <div class="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Service card 1 -->
+                <div class="service bg-teal-600 rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-4">
+                        <h3 class="text-2xl font-semibold  text-white"> Bootstrap </h3>
+                        <p class="mt-2 text-base  text-white">As a Bootstrap Developer, I am dedicated to delivering
+                            high-quality and visually appealing websites that provide an exceptional user experience
+                            across devices. My skills in HTML, CSS, JavaScript, and Bootstrap enable me to create
+                            responsive and dynamic web applications. I am passionate about staying up-to-date with the
+                            latest web development trends and technologies. I look forward to the opportunity of
+                            contributing to projects and creating innovative solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Service card 2 -->
+                <div class="service bg-amber-700 rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-4">
+                        <h3 class="text-2xl font-semibold  text-white">Tailwind</h3>
+                        <p class="mt-2 text-base  text-white">I am dedicated to creating modern and visually appealing
+                            web interfaces using the power and flexibility of Tailwind CSS. My expertise in HTML, CSS,
+                            JavaScript, and Tailwind allows me to build responsive and highly customizable websites. I
+                            am passionate about staying up-to-date with the latest web development trends and
+                            technologies, continuously expanding my skill set..</p>
+                    </div>
+                </div>
+
+                <!-- Service card 3 -->
+                <div class="service bg-blue-700 rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-4">
+                        <h3 class="text-2xl font-semibold  text-white">Web designing</h3>
+                        <p class="mt-2 text-base  text-white">I am passionate about creating visually stunning and
+                            user-centric websites that leave a lasting impression. With a keen eye for design, attention
+                            to detail, and a deep understanding of user experience, I strive to craft engaging digital
+                            experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- projects section -->
+    
+    <!-- Contact section -->
+
+    <section class="bg-slate-500 text-white py-12">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-semibold mb-8 text-center " id="contact">Contact Us</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+              <p class=" mb-4">Have a question or want to discuss a project? Drop us a message and we'll get back to you as soon as possible.</p>
+              <p class=" mb-4">123 Example Street</p>
+              <p class=" mb-4">City, State, ZIP</p>
+              <p class=" mb-4">Phone: (123) 456-7890</p>
+              <p class=" mb-4">Email: arpitjoshi564@gmail.com</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Contact Form</h3>
+              <form>
+                <div class="mb-4">
+                  <label for="name" class="block  font-medium mb-1">Name</label>
+                  <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 text-black rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div class="mb-4">
+                  <label for="email" class="block  font-medium mb-1">Email</label>
+                  <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 text-black rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div class="mb-4">
+                  <label for="message" class="block  font-medium mb-1">Message</label>
+                  <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 text-black rounded-md resize-none focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500  py-2 px-6 rounded-md hover:bg-blue-600" onclick="submitForm()"> Send Message </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- connectus section -->
+
+      <!DOCTYPE html>
+<html>
+<head>
+    <title>Connect Us Section with Flex Images</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <section class="bg-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Connect With Us</h2>
+                <p class="text-gray-600">Here are our social media handles.</p>
+            </div>
+            <div class="flex justify-center mt-8">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 px-4 mb-8">
+                        <a class="hover:text-blue-800 text-blue-500" href="">discord
+                      </a>
+                    </div>
+                    <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 px-4 mb-8">
+                        <a class="hover:text-blue-800 text-blue-500" href="">linkedin
+                        </a>
+                    </div>
+                    <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 px-4 mb-8">
+                        <a class="hover:text-blue-800 text-blue-500" href="">github
+                        </a>
+                    </div>
+                    <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 px-4 mb-8">
+                        <a class="hover:text-blue-800 text-blue-500" href="https://instagram.com/arpit__joshi_?igshid=MzRlODBiNWFlZA==">instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- footer section -->
+<footer class="bg-gray-900 py-4">
+  <div class="container mx-auto px-4">
+    <p class="text-center text-gray-300 text-sm">
+      &copy; 2023 Arpit Joshi. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+    function typeWriter() {
+      const text = "Web Designer.";
+      const typewriter = document.getElementById('typewriter');
+      let i = 0;
+      const speed = 150;
+
+      function type() {
+        if (i < text.length) {
+          typewriter.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        } else {
+          typewriter.innerHTML = ''; // Clear the text
+          i = 0; // Reset the index
+          setTimeout(type, speed); // Start again
+        }
+      }
+
+      type();
+    }
+
+    document.addEventListener('DOMContentLoaded', typeWriter);
+  </script>
+
+    <!-- JavaScript code to toggle the mobile menu -->
+    <script>
+        const btn = document.querySelector('button[aria-controls="mobile-menu"]');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', function () {
+            const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            this.setAttribute('aria-expanded', !expanded);
+            menu.classList.toggle('hidden');
+        });
+
+
+// form js
+
+        function submitForm() {
+            // Retrieve the values entered by the user
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            // Perform any necessary validation
+            if (name === '' || email === '') {
+                alert("Please fill in all the fields");
+                return;
+            }
+
+            // Do something with the form data
+            alert("Form submitted successfully");
+            // You can send the form data to a server using AJAX or perform any other action here.
+        }
+
+
+        const img = document.querySelector('.profile-image');
+        img.classList.add('animate-fade-in');
+    </script>
+</body>
+
+</html>
